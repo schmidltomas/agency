@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Created by Tomáš on 27.2.2015.
+ * edited by Juro
  */
 public class AgentManagerImpl implements AgentManager {
     @Override
@@ -16,10 +17,6 @@ public class AgentManagerImpl implements AgentManager {
         return null;
     }
 
-    @Override
-    public List<Agent> getAgentsBySkills(AgentSkills skills) {
-        return null;
-    }
 
     @Override
     public List<Agent> findAllAgents() {

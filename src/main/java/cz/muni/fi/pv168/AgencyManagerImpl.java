@@ -7,17 +7,21 @@ import java.util.List;
  */
 public class AgencyManagerImpl implements AgencyManager {
     @Override
-    public void assignAgentToAMission(Agent agent, Assignment assignment) {
-
+    public void assignAgentToAMission(Agent agent, Mission mission) {
     }
 
     @Override
-    public List<Assignment> findAssignmentsForAgent(Agent agent) {
+    public List<Agent> findAgentsForMission(Mission mission) {
         return null;
     }
 
     @Override
-    public void deleteAssignment(Assignment assignment) {
+    public List<Mission> findMissionsAssignedtoAgent(Agent agent) {
+        return null;
+    }
 
+    @Override
+    public List<Mission> findUnassignedMissions() {
+        return null;
     }
 }

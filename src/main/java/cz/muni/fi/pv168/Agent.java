@@ -10,53 +10,10 @@ public class Agent {
     private String name;
     private String codeName;
     private String status;
-    private AgentSkills agentSkills;
-    private Assignment currentAssignment;
+    private List<Skill> agentSkills;
 
     public Agent() {
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCodeName() {
-        return codeName;
-    }
-
-    public void setCodeName(String codeName) {
-        this.codeName = codeName;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public AgentSkills getAgentSkills() {
-        return agentSkills;
-    }
-
-    public void setAgentSkills(AgentSkills agentSkills) {
-        this.agentSkills = agentSkills;
-    }
-
-    public Assignment getCurrentAssigment() { return currentAssignment; }
-
-    public void setCurrentAssigment(Assignment currentAssignment) { this.currentAssignment = currentAssignment; }
 }

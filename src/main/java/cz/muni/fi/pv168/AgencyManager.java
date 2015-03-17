@@ -6,9 +6,13 @@ import java.util.List;
  * Created by Tomáš on 26.2.2015.
  */
 public interface AgencyManager {
-    void assignAgentToAMission(Agent agent, Assignment assignment);
 
-    List<Assignment> findAssignmentsForAgent(Agent agent);
+    public void assignAgentToAMission(Agent agent, Mission mission);
 
-    void deleteAssignment(Assignment assignment);
+    public List<Agent> findAgentsForMission(Mission mission);
+
+    public List<Mission> findMissionsAssignedtoAgent(Agent agent);
+
+    public List<Mission> findUnassignedMissions();
+
 }

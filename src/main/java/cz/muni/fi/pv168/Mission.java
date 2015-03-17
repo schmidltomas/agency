@@ -1,7 +1,10 @@
 package cz.muni.fi.pv168;
 
+import java.util.List;
+
 /**
  * Created by Tomáš on 26.2.2015.
+ * edited by Juro
  */
 public class Mission {
     private String name;
@@ -10,7 +13,7 @@ public class Mission {
     private boolean completed;
     private String description;
     private int id;
-    private AgentSkills requiredSkills;
+    private List<Skill> requiredSkills;
 
     public int getMaxAgents() {
         return maxAgents;
@@ -60,14 +63,16 @@ public class Mission {
         this.id = id;
     }
 
-    public AgentSkills getRequiredSkills() {
+    public List<Skill> getRequiredSkills() {
         return requiredSkills;
     }
 
-    public void setRequiredSkills(AgentSkills requiredSkills) {
+    public void setRequiredSkills(List<Skill> requiredSkills) {
         this.requiredSkills = requiredSkills;
     }
 
     public Mission() {
     }
+
+
 }

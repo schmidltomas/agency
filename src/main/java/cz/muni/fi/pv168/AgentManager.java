@@ -10,7 +10,7 @@ public interface AgentManager {
 
     Agent getAgentByID(int agentID);
 
-    List<Agent> getAgentsBySkills(AgentSkills skills);
+
 
     List<Agent> findAllAgents();
 
