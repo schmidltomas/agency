@@ -3,7 +3,6 @@ package cz.muni.fi.pv168;
 import org.junit.Before;
 import org.junit.Test;
 
-import cz.muni.fi.pv168.Mission;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
@@ -21,7 +20,7 @@ public class MissionManagerImplTest {
     public void testCreateMissionWithNull() throws Exception {
         try {
             missionManager.createMission(null);
-            fail("nevyhodil NullPointerException pre null vstup");
+            fail("Didn't throw NullPointerException on null input");
         } catch (NullPointerException ex) {
         }
     }
@@ -43,5 +42,14 @@ public class MissionManagerImplTest {
         mission.setName("Kennedy Assassination");
         missionManager.createMission(mission);
         assertThat(missionManager.findAllMissions(), hasItem(mission));
+    }
+
+    @Test
+    public void testCreateMissionCanBeDeleted() throws Exception {
+        Mission mission = new Mission();
+        mission.setName("Lady Diane assassination");
+        missionManager.createMission(mission);
+        missionManager.deleteMission(mission);
+        assertThat(missionManager.findAllMissions(), not(hasItem(mission)));
     }
 }

@@ -28,7 +28,6 @@ public class MissionManagerImplTest {
     public void testCreateMissionWithId() throws Exception {
         Mission mission = new Mission();
         mission.setName("Kennedy murder");
-
         Mission mission2 = new Mission();
         missionManager.createMission(mission2);
         assertThat(mission2.getId(), is(not(equalTo(mission.getId()))));
